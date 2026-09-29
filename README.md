@@ -34,13 +34,19 @@ Genomic interpretation
 ```
 ## Software
 
-| Tool    | Version         | Purpose                     |
-| ------- | --------------- | --------------------------- |
-| Prokka  | 1.15.6          | Genome annotation           |
-| Panaroo | 1.8.0           | Pangenome analysis          |
-| MAFFT   | 7.525           | Multiple sequence alignment |
-| IQ-TREE | 3.1.3           | Phylogenetic inference      |
-| iTOL    | Web-based       | Tree visualization          |
+| Tool         | Version         | Purpose                     |
+| ------------ | --------------- | --------------------------- |
+| fasterq-dump | 3.4.1           | Down loading samples        |
+| FastQC       | 0.12.1          | Read QC                     |
+| multiqc      | 1.34            | Read QC aggregation         |
+| SPAdes       | 4.2.0           | Genome assembly             |
+| QUAST        | 5.3.0           | Assembly QC                 |
+| kleborate    | 3.2.4           | Species/AMR/virulence       |
+| Prokka       | 1.15.6          | Genome annotation           |
+| Panaroo      | 1.8.0           | Pangenome analysis          |
+| MAFFT        | 7.525           | Multiple sequence alignment |
+| IQ-TREE      | 3.1.3           | Phylogenetic inference      |
+| iTOL         | Web-based       | Tree visualization          |
 
 ## Current Progress
 
