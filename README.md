@@ -56,8 +56,8 @@ Genomic interpretation
 - [x] GFF files prepared for Panaroo
 - [x] Panaroo pangenome analysis
 - [x] Core-gene alignment
-- [ ] Maximum-likelihood phylogenetic tree
-- [ ] Bootstrap analysis
+- [x] Maximum-likelihood phylogenetic tree
+- [x] Bootstrap analysis
 - [ ] Tree visualization and annotation
 - [ ] Integration with genomic metadata
 - [ ] Final genomic interpretation
