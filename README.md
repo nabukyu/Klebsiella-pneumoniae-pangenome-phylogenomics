@@ -38,7 +38,7 @@ Genomic interpretation
 | ------- | --------------- | --------------------------- |
 | Prokka  | 1.15.6          | Genome annotation           |
 | Panaroo | 1.8.0           | Pangenome analysis          |
-| MAFFT   | To be confirmed | Multiple sequence alignment |
+| MAFFT   | 7.525           | Multiple sequence alignment |
 | IQ-TREE | 3.1.3           | Phylogenetic inference      |
 | iTOL    | Web-based       | Tree visualization          |
 
