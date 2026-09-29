@@ -39,7 +39,7 @@ Genomic interpretation
 | Prokka  | 1.15.6          | Genome annotation           |
 | Panaroo | 1.8.0           | Pangenome analysis          |
 | MAFFT   | To be confirmed | Multiple sequence alignment |
-| IQ-TREE | To be confirmed | Phylogenetic inference      |
+| IQ-TREE | 3.1.3           | Phylogenetic inference      |
 | iTOL    | Web-based       | Tree visualization          |
 
 ## Current Progress
@@ -48,8 +48,8 @@ Genomic interpretation
 - [x] 27 genomes annotated with Prokka
 - [x] 27 GFF files generated
 - [x] GFF files prepared for Panaroo
-- [ ] Panaroo pangenome analysis
-- [ ] Core-gene alignment
+- [x] Panaroo pangenome analysis
+- [x] Core-gene alignment
 - [ ] Maximum-likelihood phylogenetic tree
 - [ ] Bootstrap analysis
 - [ ] Tree visualization and annotation
@@ -64,9 +64,15 @@ Klebsiella-pneumoniae-pangenome-phylogenomics/
 ├── README.md
 │
 ├── scripts/
-│   ├── prokka_script.sh
-│   └── panaroo_script.sh
-│
+    └── download_reads.sh
+    └── qc_reads.sh
+    └── assemble_spades.sh
+    └── qc_assemblies_quast.sh
+    └── kleborate_script.sh
+    └── prokka_script.sh
+    └── panaroo_script.sh
+    └── iqtree_script.sh
+ 
 ├── docs/
 │   └── analysis_notes.md
 │
