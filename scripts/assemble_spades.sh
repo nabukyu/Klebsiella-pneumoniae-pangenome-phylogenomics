@@ -12,14 +12,14 @@ set -e
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate spades_env
 
-mkdir -p new_assemblies
+mkdir -p assemblies
 
-for R1 in new_fastqs/*_1.fastq.gz
+for R1 in fastqs/*_1.fastq.gz
 do
     SAMPLE=$(basename "$R1" _1.fastq.gz)
 
-    R2="new_fastqs/${SAMPLE}_2.fastq.gz"
-    OUTDIR="new_assemblies/${SAMPLE}"
+    R2="fastqs/${SAMPLE}_2.fastq.gz"
+    OUTDIR="assemblies/${SAMPLE}"
 
     echo "Running SPAdes for $SAMPLE..."
 

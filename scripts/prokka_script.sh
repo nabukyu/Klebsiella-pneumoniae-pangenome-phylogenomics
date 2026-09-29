@@ -9,22 +9,12 @@
 
 set -e
 
-echo "=========================================="
-echo "Starting Prokka batch annotation"
-echo "Job ID: $SLURM_JOB_ID"
-echo "Started: $(date)"
-echo "=========================================="
-
 # Load Anaconda
 module load anaconda/2024.10
 
 # Activate Prokka environment
 source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate prokka_env
-
-# Check Prokka
-echo "Prokka version:"
-prokka --version
 
 # Input and output directories
 INPUT_DIR="Martha_contigs.fasta"
@@ -61,12 +51,7 @@ do
 
     OUTDIR="$OUTPUT_DIR/$SAMPLE"
 
-    echo ""
-    echo "=========================================="
     echo "Running Prokka for: $SAMPLE"
-    echo "Input: $BASENAME"
-    echo "Output: $OUTDIR"
-    echo "=========================================="
 
     # Skip completed genomes
     if [ -f "$OUTDIR/$SAMPLE.gff" ]; then
@@ -85,13 +70,3 @@ do
 
 done
 
-echo ""
-echo "=========================================="
-echo "Prokka batch annotation completed."
-echo "Finished: $(date)"
-echo "=========================================="
-
-GFF_COUNT=$(find "$OUTPUT_DIR" -name "*.gff" -type f | wc -l)
-
-echo "Total GFF files produced: $GFF_COUNT"
-echo "=========================================="

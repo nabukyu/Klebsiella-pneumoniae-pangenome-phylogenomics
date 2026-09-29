@@ -9,12 +9,6 @@
 
 set -e
 
-echo "=========================================="
-echo "Starting Panaroo"
-echo "Job ID: $SLURM_JOB_ID"
-echo "Started: $(date)"
-echo "=========================================="
-
 # Load Anaconda
 module load anaconda/2024.10
 
@@ -23,9 +17,6 @@ source "$(conda info --base)/etc/profile.d/conda.sh"
 
 # Activate Panaroo environment
 conda activate panaroo_env
-
-echo "Panaroo version:"
-panaroo --version
 
 # Check that GFF directory exists
 if [ ! -d "gffs" ]; then
@@ -52,10 +43,5 @@ panaroo \
     --clean-mode strict \
     -a core
 
-echo "=========================================="
 echo "Panaroo completed successfully."
-echo "Finished: $(date)"
-echo "=========================================="
 
-echo "Panaroo output:"
-ls -lh panaroo_results/

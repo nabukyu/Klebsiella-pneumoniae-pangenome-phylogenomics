@@ -9,12 +9,6 @@
 
 set -e
 
-echo "=========================================="
-echo "Starting IQ-TREE phylogenetic analysis"
-echo "Job ID: $SLURM_JOB_ID"
-echo "Started: $(date)"
-echo "=========================================="
-
 # Load IQ-TREE
 module load iqtree/3.1.3--h8471819_0
 
@@ -32,9 +26,6 @@ fi
 
 mkdir -p "$OUTPUT_DIR"
 
-echo "Input alignment: $ALIGNMENT"
-echo "Output directory: $OUTPUT_DIR"
-
 # Run IQ-TREE
 iqtree3 \
     -s "$ALIGNMENT" \
@@ -43,10 +34,5 @@ iqtree3 \
     -T AUTO \
     --prefix "$OUTPUT_DIR/kp_core"
 
-echo "=========================================="
 echo "IQ-TREE analysis completed"
-echo "Finished: $(date)"
-echo "=========================================="
 
-echo "Phylogeny files:"
-ls -lh "$OUTPUT_DIR"
